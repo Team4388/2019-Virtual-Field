@@ -5,13 +5,13 @@ using UnityEngine.UI;
 
 public class setPosition : MonoBehaviour
 {
-    robotControl robotControl;
+    robotNavXControl robotControl;
 
     // Start is called before the first frame update
     public void Start()
     {
         GameObject Robot = GameObject.Find("Robot");
-        robotControl = Robot.GetComponent<robotControl>();
+        robotControl = Robot.GetComponent<robotNavXControl>();
     }
 
     // Update is called once per frame
@@ -23,17 +23,17 @@ public class setPosition : MonoBehaviour
         {
             if (dd.value == 1)
             {
-                robotControl.pos = new Vector3(-50, 10, -260);
+                robotControl.transform.position = new Vector3(-50, 0, -256);
             }
             else if (dd.value == 2)
             {
-                robotControl.pos = new Vector3(0, 10, -260);
+                robotControl.transform.position = new Vector3(0, 0, -256);
             }
             else if (dd.value == 3)
             {
-                robotControl.pos = new Vector3(50, 10, -260);
+                robotControl.transform.position = new Vector3(50, 0, -256);
             }
-            robotControl.initialRot = robotControl.yRot;
+            robotControl.initRot = robotControl.rot;
             dd.value = 0;
         }
     }

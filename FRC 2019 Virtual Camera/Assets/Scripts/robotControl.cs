@@ -28,7 +28,7 @@ public class robotControl : MonoBehaviour
         roboCom.robotValues.TryGetValue("Yaw Angle Deg", out yRot);
         roboCom.robotValues.TryGetValue("Left Pos Inches", out leftEncoder);
         roboCom.robotValues.TryGetValue("Right Pos Inches", out rightEncoder);
-        if (!start && roboCom.isData)
+        /*if (!start && roboCom.isData)
         {
             avgEncoder = (leftEncoder + rightEncoder) / 2;
             lastEncoder = avgEncoder;
@@ -46,6 +46,6 @@ public class robotControl : MonoBehaviour
             transform.rotation = Quaternion.Euler(rot);
             transform.position = pos;
             lastEncoder = avgEncoder;
-        }
+        }*/
     }
 }
