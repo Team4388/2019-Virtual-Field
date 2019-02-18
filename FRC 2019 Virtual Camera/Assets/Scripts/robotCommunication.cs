@@ -13,10 +13,9 @@ public class robotCommunication : MonoBehaviour
     public SortedList<string, float> robotValues =
             new SortedList<string, float>
             {
-                { "Pitch", 0.0f },
-                { "Roll", 0.0f },
-                { "Yaw", 0.0f },
+                { "Yaw Angle Deg", 0.0f },
                 { "Distance", 0.0f },
+                { "Team", 0.0f },
             };
     public static int portNumber = 4388;
     public int bytesAvailable;

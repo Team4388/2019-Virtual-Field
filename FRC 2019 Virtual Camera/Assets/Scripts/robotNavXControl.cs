@@ -24,9 +24,9 @@ public class robotNavXControl : MonoBehaviour
     void Update()
     {
         float x = 0, y = 0, z = 0;
-        roboCom.robotValues.TryGetValue("Pitch", out rot.x);
-        roboCom.robotValues.TryGetValue("Yaw", out rot.y);
-        roboCom.robotValues.TryGetValue("Roll", out rot.z);
+        //roboCom.robotValues.TryGetValue("Pitch", out rot.x);
+        roboCom.robotValues.TryGetValue("Yaw Angle Deg", out rot.y);
+        //roboCom.robotValues.TryGetValue("Roll", out rot.z);
         roboCom.robotValues.TryGetValue("Distance", out distance);
         rot.x *= -1;
         rot.z *= -1;
